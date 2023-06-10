@@ -11,6 +11,7 @@ object NamceSpace {
         private const val common = "com.youssef.common"
         const val utils = "$common.utils"
         const val ui = "$common.ui"
+        const val uiTest = "$common.uiTest"
     }
 
     object Feature {

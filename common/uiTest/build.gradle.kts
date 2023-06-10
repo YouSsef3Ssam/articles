@@ -3,15 +3,11 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.plugin)
-    alias(libs.plugins.navigationSafeArgs)
-    alias(libs.plugins.hilt)
-    alias(libs.plugins.kapt)
-    alias(libs.plugins.parcelize)
 }
 
 android {
     compileSdk = ConfigData.compileSdk
-    namespace = NamceSpace.Feature.articles
+    namespace = NamceSpace.Common.uiTest
 
     defaultConfig {
         minSdk = ConfigData.minSdk
@@ -37,12 +33,8 @@ android {
         jvmTarget = libs.versions.kotlinJvmTarget.get()
     }
 
-    hilt {
-        enableAggregatingTask = true
-    }
-
     buildFeatures {
-        viewBinding = true
+        buildConfig = true
     }
 
     flavorDimensions.add(BuildVariant.enviromentDimension)
@@ -55,21 +47,6 @@ android {
             dimension = BuildVariant.enviromentDimension
         }
     }
-}
-
-dependencies {
-    implementation(project(Modules.Core.network))
-    implementation(project(Modules.Commons.utils))
-    implementation(project(Modules.Commons.ui))
-    implementation(project(Modules.Commons.uiTest))
-
-    implementation(libs.bundles.ui)
-    implementation(libs.bundles.navigationComponent)
-
-    implementation(libs.hilt)
-    kapt(libs.hiltDaggerCompiler)
-
-    testImplementation(libs.bundles.unitTest)
 }
 
 // Run ktlintCheck, ktlintFormat and detekt tasks before build the application

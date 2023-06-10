@@ -1,6 +1,8 @@
 package com.youssef.articles.presentation.features.articles
 
 import androidx.fragment.app.viewModels
+import com.perpartner.uitest.TestTags
+import com.perpartner.uitest.testTag
 import com.youssef.articles.domain.models.Article
 import com.youssef.articles.presentation.args.ArticleDetailsArgs
 import com.youssef.articles.presentation.callback.OnItemClickListener
@@ -33,6 +35,7 @@ class ArticlesFragment : BaseFragment<FragmentArticlesBinding>(FragmentArticlesB
 
     private fun initUI() {
         setupRV()
+        testTags()
     }
 
     private fun setupRV() {
@@ -71,6 +74,11 @@ class ArticlesFragment : BaseFragment<FragmentArticlesBinding>(FragmentArticlesB
     private fun showLoading() {
         binding.loadingLayout.loading.show()
         binding.articlesRV.hide()
+    }
+
+    private fun testTags() {
+        binding.articlesFragmentLayout.testTag(TestTags.ArticlesFragment.LAYOUT)
+        binding.articlesRV.testTag(TestTags.ArticlesFragment.RV)
     }
 
     override fun getLayoutResId(): Int = R.layout.fragment_articles

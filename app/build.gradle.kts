@@ -104,6 +104,9 @@ dependencies {
 
     implementation(project(Modules.Features.articles))
     implementation(project(Modules.Commons.ui))
+
+    androidTestImplementation(libs.bundles.uiTest)
+    androidTestImplementation(project(Modules.Commons.uiTest))
 }
 
 // Run ktlintCheck, ktlintFormat and detekt tasks before build the application
