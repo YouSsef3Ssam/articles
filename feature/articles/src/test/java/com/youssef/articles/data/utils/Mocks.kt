@@ -3,6 +3,7 @@ package com.youssef.articles.data.utils
 import com.youssef.articles.data.dtos.articles.ArticleDto
 import com.youssef.articles.data.dtos.articles.MediaDto
 import com.youssef.articles.data.dtos.articles.MediaMetadataDto
+import com.youssef.articles.domain.models.Article
 import com.youssef.network.data.entities.ApiResponse
 
 object Mocks {
@@ -36,6 +37,18 @@ object Mocks {
             )
         )
     )
+
+    val article = Article(
+        id = 1L,
+        summary = "Hello World!",
+        title = "Article #1",
+        media = listOf(),
+        tags = "tags",
+        url = null,
+        poster = null
+    )
+
+    val articles = listOf(article)
 
     val articleResponse = ApiResponse(listOf(articleDto))
 
