@@ -1,8 +1,6 @@
 package com.youssef.articles.presentation.features.articles
 
 import androidx.fragment.app.viewModels
-import com.youssef.uitest.TestTags
-import com.youssef.uitest.testTag
 import com.youssef.articles.domain.models.Article
 import com.youssef.articles.presentation.args.ArticleDetailsArgs
 import com.youssef.articles.presentation.callback.OnItemClickListener
@@ -15,6 +13,8 @@ import com.youssef.ui.extensions.hide
 import com.youssef.ui.extensions.navigateSafe
 import com.youssef.ui.extensions.show
 import com.youssef.ui.presentation.BaseFragment
+import com.youssef.uitest.TestTags
+import com.youssef.uitest.testTag
 import com.youssef.utils.extensions.collect
 import com.youssef.utils.states.DataState
 import dagger.hilt.android.AndroidEntryPoint
