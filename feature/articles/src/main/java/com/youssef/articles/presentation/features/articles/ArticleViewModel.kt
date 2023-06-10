@@ -6,13 +6,13 @@ import com.youssef.articles.domain.models.Articles
 import com.youssef.articles.domain.usecases.abstraction.ArticlesUseCase
 import com.youssef.articles.presentation.utils.Constants
 import com.youssef.utils.extensions.catchError
-import com.youssef.utils.extensions.launchIdling
 import com.youssef.utils.states.DataState
 import dagger.hilt.android.lifecycle.HiltViewModel
-import javax.inject.Inject
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.onStart
+import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @HiltViewModel
 class ArticleViewModel @Inject constructor(private val useCase: ArticlesUseCase) : ViewModel() {
@@ -25,7 +25,7 @@ class ArticleViewModel @Inject constructor(private val useCase: ArticlesUseCase)
     }
 
     private fun getArticles() {
-        viewModelScope.launchIdling {
+        viewModelScope.launch {
             useCase.getArticles(Constants.ARTICLE_PERIOD)
                 .onStart { _articlesDataState.emit(DataState.Loading) }
                 .catchError { _articlesDataState.emit(DataState.Failure(it)) }

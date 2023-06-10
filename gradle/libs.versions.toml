@@ -50,6 +50,7 @@ junit = "4.13.2"
 mockito = "5.3.1"
 mockk = "1.13.5"
 coroutinesTest = "1.7.1"
+turbine = "0.13.0"
 
 [libraries]
 # Support
@@ -109,6 +110,7 @@ junit = { module = "junit:junit", version.ref = "junit" }
 mockito = { module = "org.mockito:mockito-core", version.ref = "mockito" }
 mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
 coroutinesTest = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutinesTest" }
+turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
 
 [bundles]
 archComponents = ["viewModel", "livedata", "lifecycle", "viewModelState"]
@@ -118,7 +120,7 @@ ui = ["appCompat", "materialDesign", "constraintLayout"]
 navigationComponent = ["navigationFragment", "navigationUI"]
 room = ["room", "roomKtx"]
 uiTest = ["testCore", "junitKtxExt", "espresso"]
-unitTest = ["junit", "mockito", "mockk", "coroutinesTest"]
+unitTest = ["junit", "mockito", "mockk", "coroutinesTest", "turbine"]
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
