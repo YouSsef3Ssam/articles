@@ -29,6 +29,7 @@ include(
     //common modules
     ":common:ui",
     ":common:utils",
+    ":common:uiTest",
 
     //features modules
     ":feature:articles"

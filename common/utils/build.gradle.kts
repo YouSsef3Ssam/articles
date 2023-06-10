@@ -59,7 +59,6 @@ android {
 dependencies {
     implementation(libs.navigationFragment)
     implementation(libs.timber)
-    implementation(libs.espressoIdlingResource)
 
     implementation(libs.hilt)
     kapt(libs.hiltDaggerCompiler)

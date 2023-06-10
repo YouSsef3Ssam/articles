@@ -103,7 +103,7 @@ plutoRelease = { module = "com.plutolib:pluto-no-op", version.ref = "pluto" }
 testCore = { module = "androidx.test:core-ktx", version.ref = "testCore" }
 junitKtxExt = { module = "androidx.test.ext:junit-ktx", version.ref = "junitKtxExt" }
 espresso = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso" }
-espressoIdlingResource = { module = "androidx.test.espresso:espresso-idling-resource", version.ref = "espresso" }
+espressoContrib = { module = "androidx.test.espresso:espresso-contrib", version.ref = "espresso" }
 
 # Unit Test
 junit = { module = "junit:junit", version.ref = "junit" }
@@ -119,7 +119,7 @@ kotlinCoroutines = ["coroutinesCore", "coroutinesAndroid"]
 ui = ["appCompat", "materialDesign", "constraintLayout"]
 navigationComponent = ["navigationFragment", "navigationUI"]
 room = ["room", "roomKtx"]
-uiTest = ["testCore", "junitKtxExt", "espresso"]
+uiTest = ["testCore", "junitKtxExt", "espresso", "espressoContrib"]
 unitTest = ["junit", "mockito", "mockk", "coroutinesTest", "turbine"]
 
 [plugins]

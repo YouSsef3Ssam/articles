@@ -8,11 +8,11 @@ import com.youssef.articles.presentation.utils.Constants
 import com.youssef.utils.extensions.catchError
 import com.youssef.utils.states.DataState
 import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
 @HiltViewModel
 class ArticleViewModel @Inject constructor(private val useCase: ArticlesUseCase) : ViewModel() {

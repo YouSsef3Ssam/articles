@@ -3,6 +3,8 @@ package com.youssef.articles.presentation.features.articles.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.perpartner.uitest.TestTags
+import com.perpartner.uitest.testTag
 import com.youssef.articles.domain.models.Article
 import com.youssef.articles.presentation.callback.OnItemClickListener
 import com.youssef.feature.articles.databinding.ItemArticleBinding
@@ -16,7 +18,7 @@ class ArticleHolder(
     fun bind(article: Article) {
         binding.posterIV.loadImage(article.poster, null)
         binding.summaryTV.text = article.summary
-        binding.root.setOnClickListener { onItemClicked?.onItemClicked(article) }
+        binding.articleItemLayout.setOnClickListener { onItemClicked?.onItemClicked(article) }
     }
 
     companion object {
@@ -26,6 +28,7 @@ class ArticleHolder(
         ): ArticleHolder {
             val binding = ItemArticleBinding
                 .inflate(LayoutInflater.from(parent.context), parent, false)
+            binding.articleItemLayout.testTag(TestTags.ArticlesFragment.RV_ITEM)
             return ArticleHolder(binding, onItemClicked)
         }
     }

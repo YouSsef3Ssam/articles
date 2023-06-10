@@ -11,6 +11,7 @@ object Modules {
         private const val common = ":common"
         const val utils = "$common:utils"
         const val ui = "$common:ui"
+        const val uiTest = "$common:uiTest"
     }
 
     object Features {
