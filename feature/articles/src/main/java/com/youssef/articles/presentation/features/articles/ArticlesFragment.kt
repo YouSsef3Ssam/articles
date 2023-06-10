@@ -1,8 +1,8 @@
 package com.youssef.articles.presentation.features.articles
 
 import androidx.fragment.app.viewModels
-import com.perpartner.uitest.TestTags
-import com.perpartner.uitest.testTag
+import com.youssef.uitest.TestTags
+import com.youssef.uitest.testTag
 import com.youssef.articles.domain.models.Article
 import com.youssef.articles.presentation.args.ArticleDetailsArgs
 import com.youssef.articles.presentation.callback.OnItemClickListener

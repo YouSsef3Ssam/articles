@@ -1,4 +1,4 @@
-package com.perpartner.uitest
+package com.youssef.uitest
 
 object TestTags {
     object ArticlesFragment {

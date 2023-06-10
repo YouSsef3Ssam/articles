@@ -3,7 +3,7 @@ package com.youssef.articles.presnentation
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
-import com.perpartner.uitest.TestTags
+import com.youssef.uitest.TestTags
 import com.youssef.articles.BaseTest
 import com.youssef.articles.presentation.features.articles.adapter.ArticleHolder
 import com.youssef.articles.utils.clickOnItem

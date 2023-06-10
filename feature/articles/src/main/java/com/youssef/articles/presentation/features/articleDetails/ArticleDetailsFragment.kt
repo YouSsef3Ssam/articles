@@ -1,8 +1,8 @@
 package com.youssef.articles.presentation.features.articleDetails
 
 import androidx.navigation.fragment.navArgs
-import com.perpartner.uitest.TestTags
-import com.perpartner.uitest.testTag
+import com.youssef.uitest.TestTags
+import com.youssef.uitest.testTag
 import com.youssef.feature.articles.R
 import com.youssef.feature.articles.databinding.FragmentArticleDetailsBinding
 import com.youssef.ui.extensions.loadImage
